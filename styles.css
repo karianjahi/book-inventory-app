@@ -1,0 +1,80 @@
+ body {
+    background-color: azure;
+    font-size: 150%;
+ }
+
+ tr[class="read"] {
+      background-image: linear-gradient(to top, rgb(151,255,151), rgb(205,255,205));
+    }
+ tr[class="to-read"] {
+      background-image: linear-gradient(to top, rgb(255, 151, 180), rgb(255, 205, 249));
+    }
+ tr[class="in-progress"] {
+      background-image: linear-gradient(to top, #ffa500, rgb(255, 165, 70));
+    }
+
+span {
+    display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+    border: 2px solid red;
+    background-image: linear-gradient(to top, rgb(244, 52, 52), rgb(250, 103, 103));
+    border-radius: 20px;
+}
+
+tr[class="read"] span[class="status"] {
+    border: 2px solid rgb(10, 108, 3);
+    background-image: linear-gradient(to top, rgb(28, 242, 9), rgb(42, 206, 94));
+    border-radius: 20px;
+}
+
+tr[class="in-progress"] span[class="status"] {
+    border: 2px solid rgb(244, 124, 4);
+    background-image: linear-gradient(to top, rgb(238, 179, 39), rgb(214, 188, 110));
+    border-radius: 20px;
+}
+
+span[class="status"], span[class^="rate"] {
+    height: 50%;
+    width: 70%;
+    padding: 10%;
+}
+
+
+span[class^="rate"] > span {
+    border: 2px solid blueviolet;
+    border-radius: 1rem;
+    margin-left: 0.75rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: yellowgreen;
+}
+
+tr td span[class^="rate"] {
+    width: 12rem;
+}
+
+
+span[class~="one"] > span:first-of-type {
+    background-image: linear-gradient(to top, gold, yellow);    
+}
+
+span[class~="two"] > span:nth-child(1),
+span[class~="two"] > span:nth-child(2){
+    background-image: linear-gradient(to top, gold, yellow);    
+}
+
+span[class~="three"] > span {
+    background-image: linear-gradient(to top, gold, yellow);    
+}
+
+h1 {
+    text-align: center;
+}
+
+.my-table {
+    margin-left: 40rem;
+    background-color: aquamarine;
+    max-width: 70rem;
+}
